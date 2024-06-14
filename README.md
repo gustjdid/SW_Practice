@@ -10,4 +10,4 @@ BookManager 클래스에 대해 JUnit Test 코드 실행함
 
 # Test Code 실행결과
 
-<img width="1440" alt="소공 미션1 실습" src="https://github.com/gustjdid/software/assets/164537644/2c2bc192-a791-4e34-9288-38fc0608a09a">
+<img width="1440" alt="소공 미션1 실습" src="https://github.com/hy-seo0608/SW_Practice/assets/164537644/a5747605-3da7-4c59-ab2d-fa41e8df924c">
