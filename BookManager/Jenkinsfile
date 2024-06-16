@@ -1,6 +1,10 @@
 pipeline {
     agent any
-
+    
+    environment {
+        CLASSPATH = "classes;lib/;path/to/eclipse/plugins/junit-platform-console-standalone-1.7.1.jar"
+    }
+    
     stages {
         stage('Checkout') {
             steps {
@@ -11,16 +15,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Java 파일들을 컴파일하여 생성된 클래스 파일을 classes 디렉토리에 저장
-                // window 일 경우 bat, 여기서는 sh를 사용하고 있어서 Linux 명령어를 가정합니다
-                sh 'javac -encoding UTF-8 -d classes BookManager/src/**/*.java'
+                // Windows일 경우 bat 사용
+                bat 'javac -encoding UTF-8 -d classes BookManager/src/**/*.java'
             }
         }
         stage('Test') {
             steps {
-                // JUnit 5 테스트 실행을 위한 classpath 설정
-                def classpath= "classes;lib/;path/to/eclipse/plugins/junit-platform-console-standalone-1.7.1.jar"
                 // JUnit 5 테스트 실행
-                bat "java -cp ${classpath} org.junit.platform.console.ConsoleLauncher --scan-classpath > test_results.txt"
+                bat "java -cp %CLASSPATH% org.junit.platform.console.ConsoleLauncher --scan-classpath > test_results.txt"
             }
         }
     }
