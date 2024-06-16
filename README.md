@@ -2,11 +2,24 @@
 탐장: C035467 양현서
 팀원: C011174 이지현
 
-역할- 양현서: Book Class 작성, BookManager Class 작성,  
+역할\
+양현서: 레포지토리 생성, BookSearchBS Class 작성, PerformanceTestBS Class 작성, \
+이지현: BookSearchBSTest 작성, Junit Test 코드 실행\
 
-이지현: BookManagerTest 코드 작성
+# Github와 Jenkins에서 겪은 에러 메서지
 
-BookManager 클래스에 대해 JUnit Test 코드 실행함
+
+
+
+
+
+
+-----------------------------------------------------------------------------------
+
+# 소프트웨어 공학 Mission1 실습
+역할\
+양현서: Book Class 작성, BookManager Class 작성, \
+이지현: BookManagerTest 코드 작성, BookManager 클래스에 대해 JUnit Test 코드 실행
 
 # Test Code 실행결과
 
