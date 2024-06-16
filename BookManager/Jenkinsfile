@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     environment {
-        CLASSPATH = "classes;C:\\Users\\hyuns\\eclipse-jee-2024-03-R-win32-x86_64\\eclipse\\plugins\\junit-platform-console-standalone-1.7.1.jar"
+        JUNIT_JAR = "C:\\Users\\hyuns\\eclipse-jee-2024-03-R-win32-x86_64\\eclipse\\plugins\\junit-platform-console-standalone-1.7.1.jar"
+        CLASSPATH = "classes;${JUNIT_JAR}"
     }
 
     stages {
@@ -16,15 +17,20 @@ pipeline {
             steps {
                 // PowerShell을 사용하여 모든 Java 파일을 찾아 컴파일
                 powershell '''
-                $files = Get-ChildItem -Path "BookManager/src" -Recurse -Filter "*.java" | ForEach-Object { $_.FullName }
-                javac -encoding UTF-8 -d classes -cp C:\\Users\\hyuns\\eclipse-jee-2024-03-R-win32-x86_64\\eclipse\\plugins\\junit-platform-console-standalone-1.7.1.jar;classes $files
+                $files = Get-ChildItem -Path "BookManager/src/BookManagerTest" -Recurse -Filter "*.java" | ForEach-Object { $_.FullName }
+                $filesString = $files -join ' '
+                if ($filesString) {
+                    & javac -encoding UTF-8 -d classes -cp $env:JUNIT_JAR $filesString
+                } else {
+                    throw "No source files found to compile."
+                }
                 '''
             }
         }
         stage('Test') {
             steps {
                 // JUnit 5 테스트 실행
-                bat "java -cp classes;C:\\Users\\hyuns\\eclipse-jee-2024-03-R-win32-x86_64\\eclipse\\plugins\\junit-platform-console-standalone-1.7.1.jar org.junit.platform.console.ConsoleLauncher --scan-classpath > test_results.txt"
+                bat "java -cp classes;${env.JUNIT_JAR} org.junit.platform.console.ConsoleLauncher --scan-classpath > test_results.txt"
             }
         }
     }
