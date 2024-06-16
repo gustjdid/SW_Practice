@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        CLASSPATH = "classes;lib/;path/to/eclipse/plugins/junit-platform-console-standalone-1.7.1.jar"
+        CLASSPATH = "classes;lib/*;path/to/eclipse/plugins/junit-platform-console-standalone-1.7.1.jar"
     }
 
     stages {
@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                // Windows 배치 파일 명령어를 사용하여 모든 Java 파일을 찾아 컴파일
+                // PowerShell을 사용하여 모든 Java 파일을 찾아 컴파일
                 bat '''
                 @echo off
                 setlocal enabledelayedexpansion
@@ -22,14 +22,14 @@ pipeline {
                 for /r BookManager\\src %%f in (*.java) do (
                     set SOURCES=!SOURCES! %%f
                 )
-                javac -encoding UTF-8 -d classes !SOURCES!
+                javac -encoding UTF-8 -d classes -cp lib/* !SOURCES!
                 '''
             }
         }
         stage('Test') {
             steps {
                 // JUnit 5 테스트 실행
-                bat "java -cp %CLASSPATH% org.junit.platform.console.ConsoleLauncher --scan-classpath > test_results.txt"
+                bat "java -cp classes;lib/* org.junit.platform.console.ConsoleLauncher --scan-classpath > test_results.txt"
             }
         }
     }
