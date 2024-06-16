@@ -20,7 +20,8 @@ pipeline {
                 $files = Get-ChildItem -Path "BookManager/src/BookManagerTest" -Recurse -Filter "*.java" | ForEach-Object { '"' + $_.FullName + '"' }
                 $filesString = $files -join ' '
                 if ($filesString) {
-                    & javac -encoding UTF-8 -d classes -cp "$env:JUNIT_JAR" $filesString
+                    $files | ForEach-Object { Write-Output $_ }  # 파일 경로 출력
+                    & javac -encoding UTF-8 -d classes -cp "`"$env:JUNIT_JAR`"" $filesString
                 } else {
                     throw "No source files found to compile."
                 }
