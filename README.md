@@ -4,11 +4,12 @@
 
 역할\
 양현서: 레포지토리 생성, BookSearchBS Class 작성, PerformanceTestBS Class 작성, \
-이지현: BookSearchBSTest 작성, Junit Test 코드 실행\
+이지현: BookSearchBSTest 작성, Junit Test 코드 실행
 
-# Github와 Jenkins에서 겪은 에러 메서지
+# Github 관련 에러 메세지
 
-
+# Jenkins에서 겪은 에러 메세지\
+Jenkins으로 CI/CD 과정 구축하여 구동 아웃풋 로그를 만드려고 했으나, 반복되는 오류로 아웃풋 로그 생성 실
 
 
 
