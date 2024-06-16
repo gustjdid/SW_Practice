@@ -19,8 +19,10 @@ pipeline {
                 powershell '''
                 $files = Get-ChildItem -Path "BookManager/src/BookManagerTest" -Recurse -Filter "*.java" | ForEach-Object { '"' + $_.FullName + '"' }
                 $filesString = $files -join ' '
+                Write-Output "Compiling the following files:"
+                $files | ForEach-Object { Write-Output $_ }
                 if ($filesString) {
-                    $files | ForEach-Object { Write-Output $_ }  # 파일 경로 출력
+                    $env:JUNIT_JAR = "$env:JUNIT_JAR".Replace("`"", "`"`")
                     & javac -encoding UTF-8 -d classes -cp "`"$env:JUNIT_JAR`"" $filesString
                 } else {
                     throw "No source files found to compile."
@@ -31,7 +33,7 @@ pipeline {
         stage('Test') {
             steps {
                 // JUnit 5 테스트 실행
-                bat "java -cp classes;${env.JUNIT_JAR} org.junit.platform.console.ConsoleLauncher --scan-classpath > test_results.txt"
+                bat "java -cp classes;\"${env.JUNIT_JAR}\" org.junit.platform.console.ConsoleLauncher --scan-classpath > test_results.txt"
             }
         }
     }
