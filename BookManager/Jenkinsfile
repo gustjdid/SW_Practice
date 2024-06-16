@@ -22,7 +22,6 @@ pipeline {
                 Write-Output "Compiling the following files:"
                 $files | ForEach-Object { Write-Output $_ }
                 if ($filesString) {
-                    $env:JUNIT_JAR = "$env:JUNIT_JAR".Replace("`"", "`"`")
                     & javac -encoding UTF-8 -d classes -cp "`"$env:JUNIT_JAR`"" $filesString
                 } else {
                     throw "No source files found to compile."
