@@ -17,7 +17,7 @@ pipeline {
             steps {
                 // PowerShell을 사용하여 모든 Java 파일을 찾아 컴파일
                 powershell '''
-                $files = Get-ChildItem -Path "BookManager/src/BookManagerTest" -Recurse -Filter "*.java" | ForEach-Object { $_.FullName }
+                $files = Get-ChildItem -Path "BookManager/src/BookManagerTest" -Recurse -Filter "*.java" | ForEach-Object { '"' + $_.FullName + '"' }
                 $filesString = $files -join ' '
                 if ($filesString) {
                     & javac -encoding UTF-8 -d classes -cp "`"$env:JUNIT_JAR`"" $filesString
