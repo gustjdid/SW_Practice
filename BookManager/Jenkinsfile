@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        CLASSPATH = "classes;lib/*;path/to/eclipse/plugins/junit-platform-console-standalone-1.7.1.jar"
+        CLASSPATH = "classes;lib/*"
     }
 
     stages {
@@ -15,14 +15,9 @@ pipeline {
         stage('Build') {
             steps {
                 // PowerShell을 사용하여 모든 Java 파일을 찾아 컴파일
-                bat '''
-                @echo off
-                setlocal enabledelayedexpansion
-                set SOURCES=
-                for /r BookManager\\src %%f in (*.java) do (
-                    set SOURCES=!SOURCES! %%f
-                )
-                javac -encoding UTF-8 -d classes -cp lib/* !SOURCES!
+                powershell '''
+                $files = Get-ChildItem -Path "BookManager/src" -Recurse -Filter "*.java" | ForEach-Object { $_.FullName }
+                javac -encoding UTF-8 -d classes -cp lib/* $files
                 '''
             }
         }
