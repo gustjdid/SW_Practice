@@ -1,6 +1,6 @@
-# 소프트웨어 공학 Mission1 실습
-조장: C035467 양현서
-      C01174 이지현
+# 소프트웨어 공학 Mission2 실습
+탐장: C035467 양현서
+팀원: C011174 이지현
 
 역할- 양현서: Book Class 작성, BookManager Class 작성,  
 
