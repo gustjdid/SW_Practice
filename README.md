@@ -15,6 +15,10 @@ git 프로젝트 주소: https://github.com/hy-seo0608/SW_Practice
 ![스크린샷 2024-06-15 022105](https://github.com/hy-seo0608/SW_Practice/assets/164537644/2ccf40b2-0ac5-4939-a874-7a6a43bbf2ea)
 
 
+-에러 메시지: 리포지토리와 연결 실패\
+-해결 방법: 깃헙 contributer invite 클릭
+<img width="435" alt="스크린샷 2024-06-15 오후 1 37 31" src="https://github.com/hy-seo0608/SW_Practice/assets/87516653/acae1288-c3f7-4d50-8d05-905f1134f9f4">
+
 
 # Jenkins에서 겪은 에러 메세지
 
@@ -29,6 +33,12 @@ git 프로젝트 주소: https://github.com/hy-seo0608/SW_Practice
 소스 파일 목록은 올바르게 전달되고 있다는 것은 확인, 이후 각 파일 경로에 공백이 포함되는 경우 등 적절히 처리하도록 코드를 수정함. 
 
 ![image](https://github.com/hy-seo0608/SW_Practice/assets/164537644/fe3170b8-70ad-4880-b624-870b6b928b44)
+
+-에러 메시지: 깃헙과 연결 실패
+-해결 방법: fork 후 본인 리포지토리 webhook 추가
+![Uploading 스크린샷 2024-06-15 오후 1.37.31.png…]()
+
+
 
 # Jenkins CI/CD 구동 아웃풋 로그
 ![image](https://github.com/hy-seo0608/SW_Practice/assets/164537644/f6c1a1f8-14ff-439c-a237-e5f3cdb98253)
