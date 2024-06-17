@@ -3,7 +3,7 @@
 팀원: C011174 이지현
 
 역할\
-양현서: 레포지토리 생성, BookSearchBS Class 작성, PerformanceTestBS Class 작성 \
+양현서: 레포지토리 생성, BookSearchBS Class 작성, PerformanceTestBS Class 작성, Jenkins CI/CD 과정 구축\
 이지현: BookSearchBSTest 작성, Junit Test 코드 실행
 
 git 프로젝트 주소: https://github.com/hy-seo0608/SW_Practice
@@ -19,18 +19,19 @@ git 프로젝트 주소: https://github.com/hy-seo0608/SW_Practice
 # Jenkins에서 겪은 에러 메세지
 
 -에러 메세지: javac 컴파일러가 org.junit.jupiter.api 패키지를 찾지 못해서 발생한 오류\
--해결 방법: junit-platform-console-standalone-17.1.jar 파일을 다운로드하여 eclipse/plugins 디렉토리에 저장하고, environment 경로를 eclispse/plugins 디렉토리로 지정함\
+-해결 방법: junit-platform-console-standalone-17.1.jar 파일을 다운로드하여 eclipse/plugins 디렉토리에 저장하고, environment 경로를 eclispse/plugins 디렉토리로 지정함
+
 ![스크린샷 2024-06-16 232632](https://github.com/hy-seo0608/SW_Practice/assets/164537644/3f9c5706-a848-45b0-8bdc-24ed2054855e)
 
 
 -에러 메세지: javac 명령이 잘못된 플래그를 받았다는 오류\
--해결 시도: javac 명령어에 전달되는 소스 파일 목록이 올바르게 형성되지 않은 것인지 확인하는 코드를 젠킨스 파일에 작성함\
-소스 파일 목록은 올바르게 전
-![스크린샷 2024-06-17 153115](https://github.com/hy-seo0608/SW_Practice/assets/164537644/199ce750-b10c-437d-9cd2-5518cda0e5f0)
+-해결 방법: javac 명령어에 전달되는 소스 파일 목록이 올바르게 형성되지 않은 것인지 확인하는 코드를 젠킨스 파일에 작성함\
+소스 파일 목록은 올바르게 전달되고 있다는 것은 확인, 이후 각 파일 경로에 공백이 포함되는 경우 등 적절히 처리하도록 코드를 수정함. 
 
+![image](https://github.com/hy-seo0608/SW_Practice/assets/164537644/fe3170b8-70ad-4880-b624-870b6b928b44)
 
+jenkins 빌드에 성공하여 
 
-Jenkins으로 CI/CD 과정 구축하여 구동 아웃풋 로그를 만드려고 했으나, 반복되는 오류로 아웃풋 로그 생성 실패
 
 
 
