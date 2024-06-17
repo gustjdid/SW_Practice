@@ -16,7 +16,7 @@ git 프로젝트 주소: https://github.com/hy-seo0608/SW_Practice
 
 
 -에러 메시지: 리포지토리와 연결 실패\
--해결 방법: 깃헙 contributer invite 클릭
+-해결 방법: 깃헙 contributer invite 클릭\
 <img width="435" alt="스크린샷 2024-06-15 오후 1 37 31" src="https://github.com/hy-seo0608/SW_Practice/assets/87516653/acae1288-c3f7-4d50-8d05-905f1134f9f4">
 
 
@@ -34,9 +34,11 @@ git 프로젝트 주소: https://github.com/hy-seo0608/SW_Practice
 
 ![image](https://github.com/hy-seo0608/SW_Practice/assets/164537644/fe3170b8-70ad-4880-b624-870b6b928b44)
 
--에러 메시지: 깃헙과 연결 실패
--해결 방법: fork 후 본인 리포지토리 webhook 추가
-![Uploading 스크린샷 2024-06-15 오후 1.37.31.png…]()
+
+-에러 메시지: 깃헙과 연결 실패\
+-해결 방법: fork 후 본인 리포지토리 webhook 추가\
+<img width="1050" alt="스크린샷 2024-06-17 오전 2 48 45" src="https://github.com/hy-seo0608/SW_Practice/assets/87516653/12311333-458f-40ae-9402-2ac7fc3f672e">
+
 
 
 
