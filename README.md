@@ -30,9 +30,16 @@ git 프로젝트 주소: https://github.com/hy-seo0608/SW_Practice
 
 ![image](https://github.com/hy-seo0608/SW_Practice/assets/164537644/fe3170b8-70ad-4880-b624-870b6b928b44)
 
-jenkins 빌드에 성공하여 
+# Jenkins CI/CD 구동 아웃풋 로그
+![image](https://github.com/hy-seo0608/SW_Practice/assets/164537644/f6c1a1f8-14ff-439c-a237-e5f3cdb98253)
+
+![image](https://github.com/hy-seo0608/SW_Practice/assets/164537644/1536798f-99e7-407a-a902-adf2ab10cf61)
+
+![image](https://github.com/hy-seo0608/SW_Practice/assets/164537644/2981de26-5ce4-4dba-a627-5ba564cacf9a)
 
 
+
+![image](https://github.com/hy-seo0608/SW_Practice/assets/164537644/85543b1e-256e-47bb-ab30-7f6aa55aa80b)
 
 
 
