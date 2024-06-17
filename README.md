@@ -15,8 +15,8 @@ git 프로젝트 주소: https://github.com/hy-seo0608/SW_Practice
 ![스크린샷 2024-06-15 022105](https://github.com/hy-seo0608/SW_Practice/assets/164537644/2ccf40b2-0ac5-4939-a874-7a6a43bbf2ea)
 
 
--에러 메시지: 리포지토리와 연결 실패\
--해결 방법: 깃헙 contributer invite 클릭\
+-에러 메시지: 원격 리포지토리와 연결 실패\
+-해결 방법: 깃헙 contributer invite 요청 수락\
 <img width="435" alt="스크린샷 2024-06-15 오후 1 37 31" src="https://github.com/hy-seo0608/SW_Practice/assets/87516653/acae1288-c3f7-4d50-8d05-905f1134f9f4">
 
 
