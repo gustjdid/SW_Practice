@@ -3,15 +3,27 @@
 팀원: C011174 이지현
 
 역할\
-양현서: 레포지토리 생성, BookSearchBS Class 작성, PerformanceTestBS Class 작성, \
+양현서: 레포지토리 생성, BookSearchBS Class 작성, PerformanceTestBS Class 작성 \
 이지현: BookSearchBSTest 작성, Junit Test 코드 실행
+
+git 프로젝트 주소: https://github.com/hy-seo0608/SW_Practice
 
 # Github 관련 에러 메세지
 
+에러 메세지: github repository 토큰의 기간이 만료되어 만료된 토큰으로 접속하려고 시도했을 때 나타난 메세지
+해결 방법: github에서 
+![스크린샷 2024-06-15 022105](https://github.com/hy-seo0608/SW_Practice/assets/164537644/2ccf40b2-0ac5-4939-a874-7a6a43bbf2ea)
 
 
 
 # Jenkins에서 겪은 에러 메세지
+
+에러 메세지: javac 컴파일러가 org.junit.jupiter.api 패키지를 찾지 못해서 발생한 오류
+해결 방법: Junit-platform-console-standalone를 다운로드하여 eclipse/plugins 디렉토리에 저장하고, environment 경로를 eclispse/plugins 디렉토리로 지정함
+![스크린샷 2024-06-16 232632](https://github.com/hy-seo0608/SW_Practice/assets/164537644/3f9c5706-a848-45b0-8bdc-24ed2054855e)
+
+
+
 
 Jenkins으로 CI/CD 과정 구축하여 구동 아웃풋 로그를 만드려고 했으나, 반복되는 오류로 아웃풋 로그 생성 실패
 
